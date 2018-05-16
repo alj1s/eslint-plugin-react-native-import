@@ -36,6 +36,11 @@ ruleTester.run("no-native-import", rule, {
     {
       code: 'import { Text } from "react-native"',
       filename: "index.android.js"
+    },
+    {
+      options: [["index.native.test.js"]],
+      code: 'import { Text } from "react-native"',
+      filename: "index.native.test.js"
     }
   ],
 
